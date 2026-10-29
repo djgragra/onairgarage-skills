@@ -1,11 +1,60 @@
 {
   "skills": [
     {
+      "slug": "aoip-bandwidth",
+      "version": "26.10.1",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Estimate network bandwidth for audio over IP (Dante, AES67, RAVENNA, AoIP in general). Use when sizing links and switches for N channels, choosing sample rate, bit depth and packet time, comparing payload with on-the-wire bandwidth, or planning a trunk between buildings or racks."
+    },
+    {
+      "slug": "dab-fm-planner",
+      "version": "26.10.1",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Planning help for DAB/DAB+ multiplexes and FM audio chains. Use when the user asks about DAB+ capacity units, bitrate and protection levels, how many services fit in a multiplex, audio quality versus bitrate, pre-emphasis and deviation for FM, or MPX level and RDS basics."
+    },
+    {
+      "slug": "dante-aoip-troubleshooter",
+      "version": "26.10.1",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Troubleshoot Dante and AES67 audio-over-IP networks. Use for clock/PTP problems, devices missing in Dante Controller, dropped subscriptions, clicks and dropouts, latency settings, multicast and IGMP issues, QoS and DSCP settings, redundancy mistakes, or when planning a small Dante network."
+    },
+    {
+      "slug": "dead-air-diagnostics",
+      "version": "26.10.1",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Diagnose silence, dropouts and dead air in a radio or streaming chain, and set up detection and fallback so it does not repeat. Use when a station, stream or studio feed goes silent, has gaps or clicks, plays digital silence, or when the user asks how to monitor for silence, set silence-detection thresholds, or plan automatic fallback."
+    },
+    {
       "slug": "gain-staging-levels",
       "version": "26.10.1",
       "status": "to-validate",
       "last_verified": "2026-10-29",
       "description": "Gain staging and level conversion for broadcast and pro audio. Use when the user asks about dBu, dBV, dBFS, VU/PPM, +4 dBu vs -10 dBV, headroom, noise floor, distortion or hiss somewhere in a signal chain, mixing analog and digital gear, or how to set levels from microphone to console to codec, stream or Dante."
+    },
+    {
+      "slug": "ground-loop-noise-hunter",
+      "version": "26.10.1",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Find the source of hum, buzz, hiss, RF interference and crackle in analogue and mixed audio systems. Use when a studio, PA or OB system has 50/60 Hz hum, buzz with harmonics, hiss, digital noise from computers or LED lights, RF in microphones, or noise that changes when equipment is connected or touched."
+    },
+    {
+      "slug": "loudness-compliance",
+      "version": "26.10.1",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Programme loudness measurement and compliance for broadcast and streaming (EBU R128, ITU-R BS.1770, ATSC A/85, platform normalization). Use when the user asks about LUFS or LKFS, LU, loudness range, true peak, delivery specs, why a file is rejected, how much gain or limiting is needed to reach a target, or how streaming platforms treat loudness."
+    },
+    {
+      "slug": "stream-doctor",
+      "version": "26.10.1",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Diagnose and plan internet radio streaming (Icecast, Shoutcast, HLS, AAC/MP3/Opus). Use when a stream buffers, drops, has no metadata, wrong volume, high latency or listener complaints, when choosing bitrate and codec, or when estimating bandwidth and monthly data for N listeners."
     }
   ]
 }

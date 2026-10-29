@@ -1,0 +1,51 @@
+name: Release
+# Run from the Actions tab with the version (YY.M.N). Builds one zip per skill, the bundle with all skills,
+# the universal prompts and SHA256SUMS.txt, then creates the tag and the release.
+on:
+  workflow_dispatch:
+    inputs:
+      release_version:
+        description: "Version, YY.M.N (for example 26.11.1)"
+        required: true
+        type: string
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check the version
+        env:
+          V: ${{ inputs.release_version }}
+        run: |
+          [[ "$V" =~ ^[0-9]{2}\.[0-9]{1,2}\.[0-9]+$ ]] || { echo "Version must look like 26.11.1"; exit 1; }
+          if git ls-remote --exit-code --tags origin "refs/tags/v$V" >/dev/null 2>&1; then echo "Tag v$V already exists"; exit 1; fi
+          # the month in the version must be the current month (rule YY.M.N)
+          [ "$(echo "$V" | cut -d. -f1)" = "$(date -u +%y)" ] && [ "$(echo "$V" | cut -d. -f2)" = "$(date -u +%-m)" ] || { echo "Year and month must be the current ones (see the versioning rule)"; exit 1; }
+      - name: Validate and test
+        run: |
+          node scripts/build.mjs --check
+          npm test
+      - name: Build the assets
+        env:
+          V: ${{ inputs.release_version }}
+        run: |
+          mkdir -p dist
+          for d in skills/*/; do
+            s=$(basename "$d")
+            (cd skills && zip -qr "../dist/${s}-${V}.zip" "$s" -x "*/UNIVERSAL.md")
+            cp "skills/$s/UNIVERSAL.md" "dist/${s}-universal-${V}.md"
+          done
+          zip -qr "dist/onairgarage-skills-all-${V}.zip" skills README.md LICENSE manifest.json -x "*/UNIVERSAL.md"
+          (cd dist && sha256sum * > SHA256SUMS.txt)
+          ls -l dist
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          V: ${{ inputs.release_version }}
+        run: |
+          gh release create "v$V" dist/* --title "Skills $V" --notes "Release $V. One zip per skill, the bundle with all skills, the universal prompts for ChatGPT, Gemini and other assistants, and SHA256SUMS.txt. Each skill declares its status (to validate or validated)." --target "${GITHUB_SHA}"

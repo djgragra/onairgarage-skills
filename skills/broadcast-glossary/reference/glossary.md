@@ -1,0 +1,39 @@
+# Glossary
+
+- **AES3**: digital audio interface standard (AES/EBU) for two channels over balanced cable (XLR), also over coax (AES-3id) and optical variants as S/PDIF-style links.
+- **AES67**: interoperability standard for high-performance audio over IP, using RTP and PTP; lets different network audio systems exchange audio.
+- **ASIO**: low-latency audio driver interface for Windows (Steinberg).
+- **BWF**: Broadcast Wave Format, a WAV file with broadcast metadata.
+- **CBR / VBR**: constant / variable bitrate in an audio codec.
+- **Clock (word clock)**: reference timing that keeps digital audio devices in step; one device is the master and the others follow.
+- **Codec**: encoder/decoder that compresses audio (for example AAC, MP3, Opus) or the hardware used for contribution links.
+- **DAB / DAB+**: Digital Audio Broadcasting; DAB+ uses HE-AAC audio coding.
+- **dBFS**: decibels relative to digital full scale.
+- **dBu / dBV**: decibels relative to 0.7746 V rms / 1 V rms.
+- **Dante**: network audio technology from Audinate; native Dante uses its own transport and PTPv1 clocking, with an AES67 mode on supported devices.
+- **DI box**: direct box; converts an unbalanced, high-impedance source to a balanced microphone-level signal.
+- **EBU**: European Broadcasting Union.
+- **ETI / EDI**: interfaces that carry DAB ensemble data from the multiplexer to the transmitters.
+- **FEC**: forward error correction; extra data that allows a receiver to repair some errors.
+- **Gain structure**: the setting of gain at each stage of a chain so that level, headroom and noise are balanced.
+- **HLS**: HTTP Live Streaming, a segment-based streaming protocol.
+- **ICY / Shoutcast / Icecast**: protocols and servers used for internet radio streams.
+- **IFB**: interruptible foldback; a feed to a talent's earpiece that can be interrupted by the director.
+- **IGMP**: protocol for multicast group management; IGMP snooping limits multicast on switches.
+- **LKFS / LUFS**: loudness units relative to full scale; the same measurement under two names (ITU / EBU).
+- **LU / LRA**: loudness unit (relative) and loudness range.
+- **MADI**: multichannel audio digital interface (AES10), up to 64 channels over coax or fibre.
+- **Mix-minus (N-1)**: a mix that contains everything except the listener's own source, used to avoid echo in a remote link.
+- **MPX**: the multiplex signal that modulates an FM transmitter (stereo, pilot, RDS).
+- **Multicast / unicast**: one-to-many / one-to-one network delivery.
+- **OB**: outside broadcast.
+- **PAD**: programme associated data in DAB+ (for example dynamic labels and slideshow). Also "pad" as an attenuator in analogue audio.
+- **PPM**: peak programme meter, a meter that responds fast to peaks; several national types exist.
+- **PTP**: Precision Time Protocol (IEEE 1588) for clock distribution over networks.
+- **RDS**: Radio Data System, data service on FM carrying station name, text and traffic information.
+- **RTP**: Real-time Transport Protocol; carries audio and video over IP.
+- **SRT**: Secure Reliable Transport, a protocol for live streams over unreliable networks.
+- **STL**: studio-to-transmitter link.
+- **True peak (dBTP)**: the estimated peak of the reconstructed analogue signal, measured with oversampling.
+- **VU meter**: a volume-unit meter that shows average level with a slow response; not a peak meter.
+- **XLR**: three-pin connector commonly used for balanced audio.

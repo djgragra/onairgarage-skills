@@ -48,4 +48,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           V: ${{ inputs.release_version }}
         run: |
-          gh release create "v$V" dist/* --title "Skills $V" --notes "Release $V. One zip per skill, the bundle with all skills, the universal prompts for ChatGPT, Gemini and other assistants, and SHA256SUMS.txt. Each skill declares its status (to validate or validated)." --target "${GITHUB_SHA}"
+          {
+            echo "Release $V. One zip per skill, the bundle with all skills, the universal prompts for ChatGPT, Gemini and other assistants, and SHA256SUMS.txt. Each skill declares its status (to validate or validated)."
+            echo
+            echo "SHA-256:"
+            echo '```'
+            cat dist/SHA256SUMS.txt
+            echo '```'
+          } > notes.md
+          gh release create "v$V" dist/* --title "Skills $V" --notes-file notes.md --target "${GITHUB_SHA}"

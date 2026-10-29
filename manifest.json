@@ -8,6 +8,20 @@
       "description": "Estimate network bandwidth for audio over IP (Dante, AES67, RAVENNA, AoIP in general). Use when sizing links and switches for N channels, choosing sample rate, bit depth and packet time, comparing payload with on-the-wire bandwidth, or planning a trunk between buildings or racks."
     },
     {
+      "slug": "aoip-bandwidth-planner-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for the AoIP Bandwidth Planner, the free OnAir Garage web app (PWA, works offline) for planning a Dante / AES67 audio network: draw devices, switches and links, describe unicast or multicast audio flows, and see how much of each link they use. Use when the user asks how to draw a network, add flows with the AES67 or Dante model, set packet time, redundancy, safety threshold, IGMP snooping and VLAN options, read the link bars, export or import a plan, or fix a problem."
+    },
+    {
+      "slug": "audio-monitor-router-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for Audio Monitor Router, the free OnAir Garage Windows app that works as a routing matrix for the audio devices of the computer: choose which input you hear on which output, with volume, channel buttons and level meters, including the receive pairs of Dante Virtual Soundcard. Use when the user asks how to route an input to headphones or monitors, use the matrix, LISTEN, mono and L/R buttons, signal speakers, latency settings, hiding devices, custom names, or fix no sound, clicks or missing devices."
+    },
+    {
       "slug": "broadcast-glossary",
       "version": "26.10.1",
       "status": "to-validate",
@@ -15,8 +29,15 @@
       "description": "Glossary and explainer of broadcast, radio and pro-audio terms and acronyms (AES3, MADI, Dante, AES67, PTP, STL, RDS, DAB+, LUFS, PPM, mix-minus, IFB, ...), in plain language with the context in which each is used. Use when the user meets an unfamiliar acronym, needs a term explained for a colleague or client, or wants a short, correct definition for documentation."
     },
     {
+      "slug": "dab-calculator-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for the DAB+ CU ↔ Bitrate Calculator, the free OnAir Garage web app (PWA, works offline) that converts between Capacity Units and bitrate for DAB+ sub-channels with the EEP-A and EEP-B protection profiles of ETSI EN 300 401. Use when the user asks how to use the calculator, which profile or protection level to choose, how many CU a bitrate needs, what the tables mean, how to install it as an app, or why a bitrate is not listed."
+    },
+    {
       "slug": "dab-fm-planner",
-      "version": "26.10.1",
+      "version": "26.10.2",
       "status": "to-validate",
       "last_verified": "2026-10-29",
       "description": "Planning help for DAB/DAB+ multiplexes and FM audio chains. Use when the user asks about DAB+ capacity units, bitrate and protection levels, how many services fit in a multiplex, audio quality versus bitrate, pre-emphasis and deviation for FM, or MPX level and RDS basics."
@@ -36,11 +57,53 @@
       "description": "Diagnose silence, dropouts and dead air in a radio or streaming chain, and set up detection and fallback so it does not repeat. Use when a station, stream or studio feed goes silent, has gaps or clicks, plays digital silence, or when the user asks how to monitor for silence, set silence-detection thresholds, or plan automatic fallback."
     },
     {
+      "slug": "dead-air-watchdog-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for Dead Air Watchdog, the free OnAir Garage desktop app that listens to sound cards and Icecast/Shoutcast streams (up to 32 inputs) and alerts by email, Telegram and HTTP when the level stays below a threshold. Use when the user asks how to add inputs, set the silence threshold and time, use monitoring hours, frozen-audio alarms, micro-silences, compact view, wall display, heartbeat, alerts and their wording, backups and updates, or fix false alarms and other problems."
+    },
+    {
       "slug": "event-audio-rf-planning",
       "version": "26.10.1",
       "status": "to-validate",
       "last_verified": "2026-10-29",
       "description": "Planning audio for live events, outside broadcasts and festivals: input lists, patch plans, stage plans, signal flow, comms, redundancy, and wireless microphone / in-ear frequency planning. Use when the user prepares a live show, OB, conference or sports event, needs an input list or checklist, or wants a first screen for intermodulation between wireless frequencies."
+    },
+    {
+      "slug": "file-renamer-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for File Renamer, the free OnAir Garage desktop app that renames many audio and video files at once with a name pattern, always with a preview, never overwriting, with undo. Use when the user asks how to write a rename pattern with placeholders such as {date:yyyyMMdd}, {seq:3}, {artist}, {title}, {duration}, how to use find and replace, clean up names, change extensions, undo a batch, save presets or a log, or fix a problem."
+    },
+    {
+      "slug": "flowcast-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for FlowCast, the free OnAir Garage desktop app that produces and delivers radio shows: it picks up exported audio files, converts and joins them with FFmpeg, and delivers by FTP, local folder and archive on a schedule, with email and Telegram alerts. Use when the user asks how to set up a FlowCast show, install FFmpeg, schedule, use the \"check for updates\" box on sources, set FTP bookmarks, understand alerts, back up, update, or fix a problem."
+    },
+    {
+      "slug": "g-clock-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for G-Clock, the free OnAir Garage studio clock for radio presenters: 60-minute dial with stopsets and fixed events, news headlines from your own feeds, optional weather, On Air / Rec switch with a recording timer and programs, and an optional MicTime timer. Use when the user asks how to set stopsets, schedules or events, add feeds, use the REC timer and programs, run clock-only mode on a wall screen, set up the MicTime timer, back up, update, or fix a problem."
+    },
+    {
+      "slug": "g-downloader-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for G-Downloader, the free OnAir Garage desktop app for scheduled downloads (HTTP, FTP, local or network files) with dynamic file names, schedules, post-download actions and email/Telegram alerts. Use when the user asks how to set up a G-Downloader task, write placeholders such as {date:yyyyMMdd}, schedule or wait for a late file, set calendar exceptions, clean the destination folder, configure alerts, back up, update, or fix a problem."
+    },
+    {
+      "slug": "g-timer-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for G-Timer, the free OnAir Garage web app (PWA, works offline) that is a block-based recording timer for radio: programs of timed blocks, 3-2-1 pre-roll, overrun display, dynamic timing, several takes and a report. Use when the user asks how to build and record a program, use free mode, pause and correct time, redo or jump between blocks, understand DYN, export the report, import or export programs, install the app, or fix a problem."
     },
     {
       "slug": "gain-staging-levels",
@@ -57,11 +120,25 @@
       "description": "Find the source of hum, buzz, hiss, RF interference and crackle in analogue and mixed audio systems. Use when a studio, PA or OB system has 50/60 Hz hum, buzz with harmonics, hiss, digital noise from computers or LED lights, RF in microphones, or noise that changes when equipment is connected or touched."
     },
     {
+      "slug": "loudness-calculator-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for the Loudness Target Calculator, the free OnAir Garage web app (PWA, works offline) that gives the gain in dB needed to bring a file to a loudness target with a true-peak check, can measure a file in the browser, and shows platform playback gains. Use when the user asks how to use the calculator, which built-in standard to pick (EBU R 128, ATSC A/85, Spotify, Apple Podcasts and others), how the \"official\" and \"recommended\" labels differ, what the scale shows, how the measurement works and its limits, or why a value is rejected."
+    },
+    {
       "slug": "loudness-compliance",
-      "version": "26.10.1",
+      "version": "26.10.2",
       "status": "to-validate",
       "last_verified": "2026-10-29",
       "description": "Programme loudness measurement and compliance for broadcast and streaming (EBU R128, ITU-R BS.1770, ATSC A/85, platform normalization). Use when the user asks about LUFS or LKFS, LU, loudness range, true peak, delivery specs, why a file is rejected, how much gain or limiting is needed to reach a target, or how streaming platforms treat loudness."
+    },
+    {
+      "slug": "mictime-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for MicTime, the free OnAir Garage talk timer: a signal (MIDI message, key or audio level) starts the count, the next signal stops it, the total stays on screen and the timer returns to zero. Use when the user asks how to connect a console or controller by MIDI, assign Learn, use a key or audio level as the signal, build programs with steps and time limits, set colours and alerts at the limit, use compact view or full screen, export the speech list, back up, update, or fix signals that do not arrive."
     },
     {
       "slug": "post-mortem-report",
@@ -69,6 +146,13 @@
       "status": "to-validate",
       "last_verified": "2026-10-29",
       "description": "Turn messy notes about an on-air failure, outage or technical incident into a clear post-mortem or incident report with timeline, root cause, impact, fixes and follow-up actions. Use after dead air, a stream outage, a failed event feed, a network audio problem, or any technical incident that needs a written report for a manager, client or the team."
+    },
+    {
+      "slug": "show-notes-ai-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for the Show Notes Generator (Show Notes AI), the free OnAir Garage web app (PWA) that turns a radio show transcript or running order into podcast descriptions, website show notes or social posts with the AI provider of the user's choice (bring your own key, or a local model). Use when the user asks how to set up a provider and key, choose options, use \"Copy prompt instead\", understand privacy and the key storage, or fix errors such as 401, 403, 413, 429, no credit or a local server that does not answer."
     },
     {
       "slug": "stream-doctor",
@@ -83,6 +167,20 @@
       "status": "to-validate",
       "last_verified": "2026-10-29",
       "description": "Checklists and procedure for commissioning, acceptance-testing and documenting a radio studio, control room or OB van: signals, levels, clocks, network audio, monitoring, redundancy, labelling and handover. Use when building, refurbishing or handing over a studio, or when preparing a pre-air test list."
+    },
+    {
+      "slug": "tag-fixer-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for Tag Fixer, the free OnAir Garage desktop app that reads and corrects audio metadata in batch: ID3 tags and covers on MP3, BWF bext with CodingHistory, iXML and cart (AES46) on WAV/BWF (also RF64/BW64), and Vorbis comments on FLAC. Use when the user asks how to edit tags in bulk, fill fields from patterns or file names, set BWF dates, edit coding history, add covers, check files, export or import CSV, restore a batch, or fix a problem."
+    },
+    {
+      "slug": "ticker-feed-builder-guide",
+      "version": "26.10.2",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Help for Ticker Feed Builder, the free OnAir Garage desktop app that downloads RSS feeds on a schedule and turns each into numbered text lines and JPG images for TV tickers and playout graphics. Use when the user asks how to create profiles and feeds, test a feed, filter or change stories, set schedules and time windows, configure the output format and file names, set alerts and the frozen-feed alert, use headless mode, back up, update, or fix a problem."
     }
   ]
 }

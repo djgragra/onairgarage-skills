@@ -3,9 +3,15 @@
 //      node loudness.mjs gain <targetLUFS> <integratedLUFS> <truePeakdBTP>
 // Presets are delivery specifications, see reference/targets.md for sources and status.
 
+// Values as read in the documents of each standard (see reference/targets.md for sources and status).
+// EBU R 128 v5: +-0.2 LU is the quality-control tolerance; +-1.0 LU applies where the target is not practically
+// achievable (for example live programmes). ATSC A/85 long-form uses dialogue-gated loudness: enter a value from a
+// dialogue-gating meter. Apple Podcasts: -16 LKFS +-1 dB, -1 dBFS true peak.
 export const PRESETS = {
-  'ebu-r128': { target: -23, tolerance: 0.5, truePeakMax: -1 },
+  'ebu-r128': { target: -23, tolerance: 0.2, truePeakMax: -1 },
+  'ebu-r128-live': { target: -23, tolerance: 1.0, truePeakMax: -1 },
   'atsc-a85': { target: -24, tolerance: 2, truePeakMax: -2 },
+  'apple-podcasts': { target: -16, tolerance: 1, truePeakMax: -1 },
 };
 
 // Result of applying a linear gain to a measured programme.
@@ -44,7 +50,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       const r = afterGain(+a, +b, +c);
       console.log(JSON.stringify({ gain: round(r.gain), integrated: round(r.integrated), truePeak: round(r.truePeak) }, null, 2));
     } else {
-      console.log('Usage:\n  node loudness.mjs check <ebu-r128|atsc-a85> <integratedLUFS> <truePeakdBTP>\n  node loudness.mjs gain <targetLUFS> <integratedLUFS> <truePeakdBTP>');
+      console.log('Usage:\n  node loudness.mjs check <ebu-r128|ebu-r128-live|atsc-a85|apple-podcasts> <integratedLUFS> <truePeakdBTP>\n  node loudness.mjs gain <targetLUFS> <integratedLUFS> <truePeakdBTP>');
       process.exit(cmd ? 1 : 0);
     }
   } catch (e) { console.error(e.message); process.exit(1); }

@@ -1,4 +1,4 @@
-# loudness compliance (OnAir Garage skill 26.10.1)
+# loudness compliance (OnAir Garage skill 26.10.2)
 
 Use this as instructions for the AI assistant (paste in a chat, a custom GPT, a Gem or a system prompt).
 Status: to-validate. Last verified: 2026-10-29. Source: onairgarage.com
@@ -25,22 +25,22 @@ Do not use for: analogue levels in dBu or dBFS (see `gain-staging-levels`), FM/D
 
 1. **Identify the spec** from the delivering broadcaster's or platform's current document. Defaults in `reference/targets.md` are only a starting point.
 2. **Measure with a BS.1770-compliant meter** (EBU Tech 3341 gives the meter modes). Use integrated loudness for the whole programme, true peak with oversampling, and LRA only if the spec asks for it.
-3. **Compare** with the script: `node scripts/loudness.mjs check ebu-r128 <integrated> <truePeak>`. It reports the offset in LU, whether loudness and true peak pass, the gain to the target, and whether that gain would push the true peak over the limit.
+3. **Compare** with the script: `node scripts/loudness.mjs check ebu-r128 <integrated> <truePeak>` (presets: `ebu-r128` with the +-0.2 LU quality-control tolerance, `ebu-r128-live` with +-1.0 LU where the target is not practically achievable, `atsc-a85`, `apple-podcasts`). It reports the offset in LU, whether loudness and true peak pass, the gain to the target, and whether that gain would push the true peak over the limit.
 4. **Fix in this order**: (a) gain, if the peak allows it; (b) if the gain would exceed the true-peak limit, a true-peak limiter or better dynamics processing, then measure again; (c) never "fix" by changing only the meter.
 5. **Re-measure the final file**, after any codec step. Lossy encoding can change true peak.
 6. **Report**: measured values, the spec used and its date, the changes made, and the new values.
 
 ## Reference
 
-- Script: `scripts/loudness.mjs` (Node, no dependencies); presets `ebu-r128` and `atsc-a85`; also `gain <target> <integrated> <truePeak>`.
+- Script: `scripts/loudness.mjs` (Node, no dependencies); presets `ebu-r128`, `ebu-r128-live`, `atsc-a85`, `apple-podcasts`; also `gain <target> <integrated> <truePeak>`.
 - Units: 1 LU is 1 dB of relative loudness. LUFS (EBU) and LKFS (ITU/ATSC) are the same measurement.
-- Targets, tolerances and platform notes: `reference/targets.md`.
+- Targets, tolerances, status (official or recommended) and primary documents: `reference/targets.md`. ATSC A/85 long-form uses dialogue-gated loudness: use a meter with dialogue gating for it.
 - Gating for integrated loudness: absolute gate -70 LUFS, relative gate 10 LU below (BS.1770 / Tech 3341). LRA uses a different relative gate (Tech 3342); read the document, do not recompute by hand.
 - Delivery targets are not the same as platform playback normalization.
 
 ## Sources
 
-- EBU R 128 and Tech 3341 (meter modes), Tech 3342 (loudness range); ITU-R BS.1770 (algorithm); ATSC A/85. Figures in `reference/targets.md` were checked through secondary sources on 2026-10-29 and are marked as such there.
+- EBU R 128 v5 (Nov 2023) and Tech 3341 (meter modes), Tech 3342 (loudness range); ITU-R BS.1770-5 (algorithm); ATSC A/85:2026-07; Apple Podcasts audio requirements; Spotify loudness page. The figures in `reference/targets.md` are those documented, with sources, in the README of the OnAir Garage Loudness Target Calculator (checked by its author in September 2026). They were not re-read in the original documents for this skill.
 - The calculations are in `scripts/loudness.mjs`, tested in `scripts/loudness.test.mjs`.
 
 ## Limits

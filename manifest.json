@@ -1,0 +1,11 @@
+{
+  "skills": [
+    {
+      "slug": "gain-staging-levels",
+      "version": "26.10.1",
+      "status": "to-validate",
+      "last_verified": "2026-10-29",
+      "description": "Gain staging and level conversion for broadcast and pro audio. Use when the user asks about dBu, dBV, dBFS, VU/PPM, +4 dBu vs -10 dBV, headroom, noise floor, distortion or hiss somewhere in a signal chain, mixing analog and digital gear, or how to set levels from microphone to console to codec, stream or Dante."
+    }
+  ]
+}

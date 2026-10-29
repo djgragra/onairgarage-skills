@@ -1,0 +1,12 @@
+{
+  "name": "onairgarage-skills",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Skills for AI assistants on broadcast and professional audio, by OnAir Garage",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test \"skills/*/scripts/*.test.mjs\""
+  }
+}

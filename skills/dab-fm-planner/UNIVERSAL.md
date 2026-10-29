@@ -1,4 +1,4 @@
-# dab fm planner (OnAir Garage skill 26.10.1)
+# dab fm planner (OnAir Garage skill 26.10.2)
 
 Use this as instructions for the AI assistant (paste in a chat, a custom GPT, a Gem or a system prompt).
 Status: to-validate. Last verified: 2026-10-29. Source: onairgarage.com
@@ -24,8 +24,8 @@ Do not use for: coverage prediction and licences (they need a planning tool and 
 
 ### DAB and DAB+
 
-1. Take each service's bitrate (a multiple of 8 kbit/s) and its protection profile.
-2. Compute capacity units with the script: `node scripts/dab.mjs 3-A 64 64 72 80`. It sums the units used and shows the remaining units out of 864.
+1. Take each service's bitrate (a multiple of 8 kbit/s for EEP-A, of 32 kbit/s for EEP-B) and its protection profile (1-A to 4-A, or 1-B to 4-B).
+2. Compute capacity units with the script: `node scripts/dab.mjs 3-A 64 64 72 80` (for EEP-B use for example `node scripts/dab.mjs 3-B 64 96`). It sums the units used and shows the remaining units out of 864.
 3. If it does not fit: lower bitrates, use fewer services, or lower protection (more robust profiles use more units). State the trade-off to the user, who chooses.
 4. Note that DAB+ audio uses HE-AAC; the useful bitrate for a given quality depends on the encoder and the material (speech needs less than music). Listen tests are required: do not give a quality verdict from the number alone.
 5. Check the final plan against the regulator's or the multiplex operator's rules, and the encoder's own limits (some encoders add overhead for data services and PAD).
@@ -41,18 +41,18 @@ Do not use for: coverage prediction and licences (they need a planning tool and 
 ## Reference
 
 - Total main service channel capacity: 864 CU (transmission mode I).
-- EEP set A: CU = factor x (bitrate / 8), with factors 12, 8, 6 and 4 for profiles 1-A, 2-A, 3-A and 4-A. Example: 64 kbit/s at 3-A = 48 CU; 18 such services fill 864 CU.
+- EEP set A (table 9): bitrate 8n kbit/s, CU = 12n, 8n, 6n, 4n for levels 1-A to 4-A. EEP set B (table 10): bitrate 32n kbit/s, CU = 27n, 21n, 18n, 15n for levels 1-B to 4-B. Example: 64 kbit/s at 3-A = 48 CU; 18 such services fill 864 CU.
 - Examples of real multiplex listings agree with this formula (64 kbit/s at 3-A = 48 CU, 80 kbit/s = 60 CU, 72 kbit/s = 54 CU).
 - Details and notes in `reference/dab.md`.
 
 ## Sources
 
-- ETSI EN 300 401 (DAB), the clauses on sub-channel organisation and protection; ETSI TS 102 563 for DAB+ audio. These texts were not opened for this version; the formula was checked against published multiplex listings via secondary sources on 2026-10-29.
+- ETSI EN 300 401 V2.1.1 (2017-01), clause 6.2.1, tables 9 and 10 (sub-channel sizes) and the 864 CU frame: as documented, with the clause, in the README of the OnAir Garage DAB+ Calculator, which states it checked the tables (112 values) and that the draft V2.2.1 (2026-02) is unchanged; also consistent with published multiplex listings. The ETSI text was not opened for this skill. ETSI TS 102 563 covers DAB+ audio.
 - FM: ITU-R BS.450 (FM sound broadcasting emission standards) and the regulator's rules in each country. Not reproduced here.
 
 ## Limits
 
 - Status is "to validate": not yet reviewed by a DAB or FM engineer.
-- Table values are for EEP set A only; other profiles (set B, UEP) are not included.
+- Table values are for EEP sets A and B; UEP (unequal error protection) profiles are not included.
 - No coverage, power, antenna or interference advice.
 - Data services, PAD and encoder overhead can use capacity not shown by this calculation.

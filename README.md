@@ -12,6 +12,8 @@ Each folder in `skills/` has a `SKILL.md` with the same sections: When to use, A
 Reference, Sources, Limits. Calculations are scripts with tests, not numbers written from memory. Every skill
 declares its status: `draft`, `to-validate` or `validated`, and the date it was last verified.
 
+<a href="https://ko-fi.com/F8V328ADFH"><img height="36" src="https://storage.ko-fi.com/cdn/kofi6.png?v=6" alt="Buy Me a Coffee at ko-fi.com"></a>
+
 ## Using a skill
 
 - **Claude**: add the skill folder (or its zip from the Releases page) as a Claude Skill.
@@ -31,3 +33,9 @@ npm test
 These skills are written by a human with the help of AI and are not a substitute for the manuals of your
 equipment, the published standards or a qualified engineer. Each skill lists its sources and what it does not
 know.
+
+## Support
+
+These skills are free and will stay free, with source code. If they saved your day, you can leave a tip on Ko-fi: a thank-you, nothing more.
+
+<a href="https://ko-fi.com/F8V328ADFH"><img height="36" src="https://storage.ko-fi.com/cdn/kofi6.png?v=6" alt="Buy Me a Coffee at ko-fi.com"></a>

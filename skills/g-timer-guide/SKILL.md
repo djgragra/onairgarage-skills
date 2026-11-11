@@ -2,6 +2,7 @@
 name: g-timer-guide
 description: Help for G-Timer, the free OnAir Garage web app (PWA, works offline) that is a block-based recording timer for radio: programs of timed blocks, 3-2-1 pre-roll, overrun display, dynamic timing, several takes and a report. Use when the user asks how to build and record a program, use free mode, pause and correct time, redo or jump between blocks, understand DYN, export the report, import or export programs, install the app, or fix a problem.
 version: 26.10.2
+app_version: 2026.10.1
 status: to-validate
 last_verified: 2026-10-29
 ---

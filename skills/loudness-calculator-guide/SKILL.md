@@ -2,6 +2,7 @@
 name: loudness-calculator-guide
 description: Help for the Loudness Target Calculator, the free OnAir Garage web app (PWA, works offline) that gives the gain in dB needed to bring a file to a loudness target with a true-peak check, can measure a file in the browser, and shows platform playback gains. Use when the user asks how to use the calculator, which built-in standard to pick (EBU R 128, ATSC A/85, Spotify, Apple Podcasts and others), how the "official" and "recommended" labels differ, what the scale shows, how the measurement works and its limits, or why a value is rejected.
 version: 26.10.2
+app_version: 2026.10.1
 status: to-validate
 last_verified: 2026-10-29
 ---

@@ -2,6 +2,7 @@
 name: aoip-bandwidth-planner-guide
 description: Help for the AoIP Bandwidth Planner, the free OnAir Garage web app (PWA, works offline) for planning a Dante / AES67 audio network: draw devices, switches and links, describe unicast or multicast audio flows, and see how much of each link they use. Use when the user asks how to draw a network, add flows with the AES67 or Dante model, set packet time, redundancy, safety threshold, IGMP snooping and VLAN options, read the link bars, export or import a plan, or fix a problem.
 version: 26.10.2
+app_version: 2026.10.1
 status: to-validate
 last_verified: 2026-10-29
 ---

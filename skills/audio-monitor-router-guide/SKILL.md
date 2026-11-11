@@ -2,6 +2,7 @@
 name: audio-monitor-router-guide
 description: Help for Audio Monitor Router, the free OnAir Garage Windows app that works as a routing matrix for the audio devices of the computer: choose which input you hear on which output, with volume, channel buttons and level meters, including the receive pairs of Dante Virtual Soundcard. Use when the user asks how to route an input to headphones or monitors, use the matrix, LISTEN, mono and L/R buttons, signal speakers, latency settings, hiding devices, custom names, or fix no sound, clicks or missing devices.
 version: 26.10.2
+app_version: 26.10.2
 status: to-validate
 last_verified: 2026-10-29
 ---

@@ -2,6 +2,7 @@
 name: dab-calculator-guide
 description: Help for the DAB+ CU ↔ Bitrate Calculator, the free OnAir Garage web app (PWA, works offline) that converts between Capacity Units and bitrate for DAB+ sub-channels with the EEP-A and EEP-B protection profiles of ETSI EN 300 401. Use when the user asks how to use the calculator, which profile or protection level to choose, how many CU a bitrate needs, what the tables mean, how to install it as an app, or why a bitrate is not listed.
 version: 26.10.2
+app_version: 2026.10.1
 status: to-validate
 last_verified: 2026-10-29
 ---

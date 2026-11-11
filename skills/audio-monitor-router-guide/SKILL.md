@@ -22,6 +22,8 @@ Do not use for: changing Dante subscriptions (the app never does; that stays in 
 3. What is heard: nothing, clicks, wrong side, delay too long?
 4. Is any other program using the device exclusively?
 
+If the user's version is newer than 26.10.2, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/audio-monitor-router-guide/.
+
 ## Procedure
 
 1. Install `Audio-Monitor-Router-Setup-<V>.exe` from the releases page and check it against `SHA256SUMS.txt`. If SmartScreen appears, More info, Run anyway. No Python is needed.

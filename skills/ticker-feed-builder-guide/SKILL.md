@@ -23,6 +23,8 @@ Do not use for: a specific ticker system's own configuration, or for advice on p
 3. The feed addresses (without credentials) and how often they update; how many screens and folders.
 4. The message shown when a feed fails (feed test result, console, alerts). Never ask for passwords, tokens or credentials inside addresses.
 
+If the user's version is newer than 26.10.12, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/ticker-feed-builder-guide/.
+
 ## Procedure
 
 1. **Create a profile** (`+ New profile`): one profile has one output folder, its feeds, a check interval, a placeholder image and an output format. Use several profiles if different screens read different folders.

@@ -20,6 +20,8 @@ Do not use for: the separate MicTime app (see `mictime-guide`) or for studio aut
 3. For timing questions: which minutes of the hour are ad breaks, news or jingles, and whether they differ by day and hour.
 4. For MicTime: which signal starts and stops the timer (MIDI message, key, audio level) and the exact behaviour seen.
 
+If the user's version is newer than 26.10.6, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/g-clock-guide/.
+
 ## Procedure
 
 **Stopsets and events**

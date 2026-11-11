@@ -20,6 +20,8 @@ Do not use for: other automation tools, the FTP server's own setup, or audio edi
 3. Output format and bitrate; is FFmpeg installed and what does `Test` next to the FFmpeg path say?
 4. The exact message in the show's Log tab or the console. Never ask for passwords or tokens.
 
+If the user's version is newer than 26.11.1, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/flowcast-guide/.
+
 ## Procedure
 
 **First show** (quick start)

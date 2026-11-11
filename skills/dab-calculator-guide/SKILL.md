@@ -22,6 +22,8 @@ Do not use for: a real multiplex plan with several services (see `dab-fm-planner
 3. The protection level (1 to 4, with A or B).
 4. The device and browser, if the question is about installing.
 
+If the user's version is newer than 2026.10.1, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/dab-calculator-guide/.
+
 ## Procedure
 
 1. Open `https://onairgarage.com/apps/dab-calculator/` (tool page `https://onairgarage.com/tools/dab-calculator/`). Nothing is installed to use it; it works offline after the first visit.

@@ -21,6 +21,8 @@ Do not use for: other download tools, the server's own configuration, or feature
 3. What should happen and when (schedule type, time zone or daylight-saving effects, holidays).
 4. The exact message in the console or the history, if something fails. Never ask for passwords or tokens: ask for the message only, with secrets removed.
 
+If the user's version is newer than 26.10.5, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/g-downloader-guide/.
+
 ## Procedure
 
 **Set up a task**

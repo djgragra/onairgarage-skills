@@ -20,6 +20,8 @@ Do not use for: the MicTime timer inside G-Clock (see `g-clock-guide`, same opti
 3. How the signals work: one signal (first starts, next stops) or two signals (one starts, one stops).
 4. What the monitor ("Incoming messages") shows when the user presses the button.
 
+If the user's version is newer than 26.10.4, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/mictime-guide/.
+
 ## Procedure
 
 1. **MIDI**: connect the device (or the virtual port of the sending software); `Refresh` if it is not listed. Choose the MIDI input or "All inputs". Press `Learn` next to Start / stop (or Start, Stop, Reset), then send the message from the console. Set the channel to any if the source changes it. A value above 0 is on, 0 is off; only on acts, except when Start and Stop are the same message (on starts, off stops).

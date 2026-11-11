@@ -2,6 +2,7 @@
 name: show-notes-ai-guide
 description: Help for the Show Notes Generator (Show Notes AI), the free OnAir Garage web app (PWA) that turns a radio show transcript or running order into podcast descriptions, website show notes or social posts with the AI provider of the user's choice (bring your own key, or a local model). Use when the user asks how to set up a provider and key, choose options, use "Copy prompt instead", understand privacy and the key storage, or fix errors such as 401, 403, 413, 429, no credit or a local server that does not answer.
 version: 26.10.2
+app_version: 2026.10.3
 status: to-validate
 last_verified: 2026-10-29
 ---

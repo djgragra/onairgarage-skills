@@ -39,6 +39,15 @@ for (const slug of slugs) {
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) fail('folder name must be kebab-case');
   if (!meta.description || meta.description.length < 40) fail('description missing or too short');
   if (!/^\d{2}\.\d{1,2}\.\d+$/.test(meta.version || '')) fail('version must be YY.M.N');
+  if (slug.endsWith('-guide')) {
+    // A guide follows one version of its app. `app_version` is what status.mjs in garage-hub compares with the release.
+    if (!/^(20)?\d{2}\.\d{1,2}\.\d+$/.test(meta.app_version || '')) fail('guide needs app_version: (the app version it follows)');
+    else {
+      const f = body.match(/this skill follows ([0-9.]+)\./);
+      if (!f) fail('guide must say "this skill follows <app_version>." in When to use');
+      else if (f[1] !== meta.app_version) fail(`text follows ${f[1]} but app_version is ${meta.app_version}`);
+    }
+  }
   if (!STATUSES.includes(meta.status)) fail(`status must be one of ${STATUSES.join(', ')}`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(meta.last_verified || '')) fail('last_verified must be YYYY-MM-DD');
   const headings = [...body.matchAll(/^## (.+)$/gm)].map((h) => h[1].trim());
@@ -65,7 +74,7 @@ for (const slug of slugs) {
   } else {
     writeFileSync(uPath, universal);
   }
-  manifest.push({ slug, version: meta.version, status: meta.status, last_verified: meta.last_verified, description: meta.description });
+  manifest.push({ slug, version: meta.version, ...(meta.app_version ? { app_version: meta.app_version } : {}), status: meta.status, last_verified: meta.last_verified, description: meta.description });
 }
 
 if (errors.length) {

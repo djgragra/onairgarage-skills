@@ -2,6 +2,7 @@
 name: tag-fixer-guide
 description: Help for Tag Fixer, the free OnAir Garage desktop app that reads and corrects audio metadata in batch: ID3 tags and covers on MP3, BWF bext with CodingHistory, iXML and cart (AES46) on WAV/BWF (also RF64/BW64), and Vorbis comments on FLAC. Use when the user asks how to edit tags in bulk, fill fields from patterns or file names, set BWF dates, edit coding history, add covers, check files, export or import CSV, restore a batch, or fix a problem.
 version: 26.10.2
+app_version: 26.10.4
 status: to-validate
 last_verified: 2026-10-29
 ---

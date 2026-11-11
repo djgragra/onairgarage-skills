@@ -2,6 +2,7 @@
 name: file-renamer-guide
 description: Help for File Renamer, the free OnAir Garage desktop app that renames many audio and video files at once with a name pattern, always with a preview, never overwriting, with undo. Use when the user asks how to write a rename pattern with placeholders such as {date:yyyyMMdd}, {seq:3}, {artist}, {title}, {duration}, how to use find and replace, clean up names, change extensions, undo a batch, save presets or a log, or fix a problem.
 version: 26.10.2
+app_version: 26.10.4
 status: to-validate
 last_verified: 2026-10-29
 ---

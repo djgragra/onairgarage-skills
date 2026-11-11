@@ -2,6 +2,7 @@
 name: ticker-feed-builder-guide
 description: Help for Ticker Feed Builder, the free OnAir Garage desktop app that downloads RSS feeds on a schedule and turns each into numbered text lines and JPG images for TV tickers and playout graphics. Use when the user asks how to create profiles and feeds, test a feed, filter or change stories, set schedules and time windows, configure the output format and file names, set alerts and the frozen-feed alert, use headless mode, back up, update, or fix a problem.
 version: 26.10.2
+app_version: 26.10.12
 status: to-validate
 last_verified: 2026-10-29
 ---

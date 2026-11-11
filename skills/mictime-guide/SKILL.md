@@ -2,6 +2,7 @@
 name: mictime-guide
 description: Help for MicTime, the free OnAir Garage talk timer: a signal (MIDI message, key or audio level) starts the count, the next signal stops it, the total stays on screen and the timer returns to zero. Use when the user asks how to connect a console or controller by MIDI, assign Learn, use a key or audio level as the signal, build programs with steps and time limits, set colours and alerts at the limit, use compact view or full screen, export the speech list, back up, update, or fix signals that do not arrive.
 version: 26.10.2
+app_version: 26.10.4
 status: to-validate
 last_verified: 2026-10-29
 ---

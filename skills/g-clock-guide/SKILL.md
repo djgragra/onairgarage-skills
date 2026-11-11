@@ -2,6 +2,7 @@
 name: g-clock-guide
 description: Help for G-Clock, the free OnAir Garage studio clock for radio presenters: 60-minute dial with stopsets and fixed events, news headlines from your own feeds, optional weather, On Air / Rec switch with a recording timer and programs, and an optional MicTime timer. Use when the user asks how to set stopsets, schedules or events, add feeds, use the REC timer and programs, run clock-only mode on a wall screen, set up the MicTime timer, back up, update, or fix a problem.
 version: 26.10.2
+app_version: 26.10.6
 status: to-validate
 last_verified: 2026-10-29
 ---

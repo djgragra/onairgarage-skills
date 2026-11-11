@@ -22,6 +22,8 @@ Do not use for: a hardware timer, or live-on-air speech timing by a signal (see 
 3. The plan: how many blocks and their planned times; should drift carry over to the next blocks?
 4. What went wrong (the exact behaviour).
 
+If the user's version is newer than 2026.10.1, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/g-timer-guide/.
+
 ## Procedure
 
 1. Open `https://onairgarage.com/apps/g-timer/`. It works offline after the first visit. Language is set in the header (English, Italiano, Español) and remembered on the device.

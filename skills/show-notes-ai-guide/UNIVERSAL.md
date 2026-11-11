@@ -19,6 +19,8 @@ Do not use for: choosing the best AI model, writing the show notes yourself (tha
 2. The exact message shown by the app. Never ask for the API key or paste it anywhere.
 3. How long the text is, and the browser and device.
 
+If the user's version is newer than 2026.10.3, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/show-notes-ai-guide/.
+
 ## Procedure
 
 1. Open `https://onairgarage.com/apps/show-notes-ai/` (nothing to install; it can be installed as an app). Language is in the header; theme is light, dark or system.

@@ -20,6 +20,8 @@ Do not use for: editing tags (the app never writes tags or changes file content)
 3. Where the information comes from: the date (today or the file's modification date), a counter, the folder, or tags (artist, title, duration, bit rate, sample rate).
 4. Do the files have those tags? Some recorders and editors leave them empty.
 
+If the user's version is newer than 26.10.4, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/file-renamer-guide/.
+
 ## Procedure
 
 1. Add files (drop, `Add files...`, `Add folder...`). Folders are scanned for audio and video; `Include subfolders` goes deeper; hidden files, folders and links are skipped; a scan stops at 20,000 files.

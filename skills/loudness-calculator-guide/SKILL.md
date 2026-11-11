@@ -22,6 +22,8 @@ Do not use for: a certified measurement for a contractual delivery (use a certif
 3. Is the programme long-form or short-form, and for ATSC, does the meter use dialogue gating?
 4. The message shown, if a value is rejected.
 
+If the user's version is newer than 2026.10.1, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/loudness-calculator-guide/.
+
 ## Procedure
 
 1. Open `https://onairgarage.com/apps/loudness-calculator/` (works offline after the first visit; installable as an app).

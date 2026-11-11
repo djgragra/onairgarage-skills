@@ -46,6 +46,7 @@ for (const slug of slugs) {
       const f = body.match(/this skill follows ([0-9.]+)\./);
       if (!f) fail('guide must say "this skill follows <app_version>." in When to use');
       else if (f[1] !== meta.app_version) fail(`text follows ${f[1]} but app_version is ${meta.app_version}`);
+      if (!body.includes(`newer than ${meta.app_version}, say so`)) fail('guide must tell the assistant what to do when the user has a newer app version ("If the user\'s version is newer than <app_version>, say so ...")');
     }
   }
   if (!STATUSES.includes(meta.status)) fail(`status must be one of ${STATUSES.join(', ')}`);

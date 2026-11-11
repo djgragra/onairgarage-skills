@@ -22,6 +22,8 @@ Do not use for: a quick generic payload calculation without a drawing (see `aoip
 3. Is IGMP snooping configured on the switches, and is a VLAN tag used?
 4. What the user wants to know: will it fit, where is the bottleneck, what happens on a link failure?
 
+If the user's version is newer than 2026.10.1, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/aoip-bandwidth-planner-guide/.
+
 ## Procedure
 
 1. Open `https://onairgarage.com/apps/aoip-bandwidth-planner/`. Language is in the header; theme is light, dark or system.

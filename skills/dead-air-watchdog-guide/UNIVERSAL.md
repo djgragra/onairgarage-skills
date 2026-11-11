@@ -20,6 +20,8 @@ Do not use for: choosing a hardware silence sensor, loudness measurements (the a
 3. Typical programme: music with crossfades, speech with pauses, long silences by design?
 4. Which alert channels are set up, and what `Send test` says. Never ask for passwords, tokens or webhook addresses.
 
+If the user's version is newer than 26.11.2, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/dead-air-watchdog-guide/.
+
 ## Procedure
 
 1. **Add inputs** (Settings, Inputs): `Add sound card` (choose the device and the channels: a pair from 1-2 up to 15-16, or a single channel, `Channel 1 only (mono)` to `Channel 16 only (mono)`; one input per choice. The list shows only the channels the card really has; a saved choice stays even if the card lacks it. A single channel shows one level meter. Above 8 channels it is not tried on real hardware: if the card delivers fewer channels than asked, the input reports a problem) or `Add stream` (an `http://` or `https://` address; credentials inside the address are masked). Name each input; the name appears on the tile, in alerts and in the log.

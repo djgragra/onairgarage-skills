@@ -20,6 +20,8 @@ Do not use for: OGG, M4A, AIFF and other formats (not supported), changing audio
 3. Where the information comes from: the file name, a pattern, the file's dates, a spreadsheet.
 4. For WAV: is it a recorder or playout file (bext, iXML, cart fields) and where are backups kept?
 
+If the user's version is newer than 26.10.4, say so before answering: this guide may not cover what changed, so mark what may be out of date and point to the latest guide at https://onairgarage.com/tools/tag-fixer-guide/.
+
 ## Procedure
 
 1. Add files (drop, `Add files...`, `Add folder...`, optionally `Include subfolders`). Each type has its own tab: MP3 (ID3), WAV/BWF (BWF, iXML, Cart views), FLAC.

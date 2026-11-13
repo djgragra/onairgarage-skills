@@ -62,9 +62,9 @@
     {
       "slug": "dead-air-watchdog-guide",
       "version": "26.10.2",
-      "app_version": "26.11.2",
+      "app_version": "26.11.3",
       "status": "to-validate",
-      "last_verified": "2026-11-11",
+      "last_verified": "2026-11-13",
       "description": "Help for Dead Air Watchdog, the free OnAir Garage desktop app that listens to sound cards and Icecast/Shoutcast streams (up to 32 inputs) and alerts by email, Telegram and HTTP when the level stays below a threshold. Use when the user asks how to add inputs, set the silence threshold and time, use monitoring hours, frozen-audio alarms, micro-silences, compact view, wall display, heartbeat, alerts and their wording, backups and updates, or fix false alarms and other problems."
     },
     {
